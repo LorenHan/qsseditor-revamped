@@ -4,18 +4,18 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../about.ui" line="68"/>
+        <location filename="../about.ui" line="120"/>
         <source>OK</source>
         <translation>好的</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="103"/>
+        <location filename="../about.ui" line="174"/>
         <source>QSS Editor is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</source>
         <extracomment>See https://www.gnu.org/licenses/gpl-2.0.txt . &quot;THT&quot; is the name of the application</extracomment>
         <translation>QSS 编辑器的发布是希望它能对用户有所帮助，但它没有任何担保；也没有适销性或针对特定用途的的默示性担保。</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="122"/>
+        <location filename="../about.ui" line="161"/>
         <source>QSS Editor is a tool to edit and preview Qt style sheets</source>
         <extracomment>&quot;THT&quot; is the name of the application. The URL to visit will be added in runtime. Ticker is a short company name, see http://www.investopedia.com/terms/t/tickersymbol.asp . The common practice is to borrow &quot;ticker&quot; from English and incorporate into your language (see http://en.wikipedia.org/wiki/Loanword)</extracomment>
         <translation>QSS 编辑器是一个编辑和预览 Qt 样式表的工具</translation>
@@ -24,6 +24,11 @@
         <location filename="../about.cpp" line="37"/>
         <source>Dmitry Baryshev</source>
         <translation>Dmitry Baryshev</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="40"/>
+        <source>Ilya Tsybulsky</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

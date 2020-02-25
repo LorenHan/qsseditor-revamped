@@ -4,18 +4,18 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../about.ui" line="68"/>
+        <location filename="../about.ui" line="120"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="103"/>
+        <location filename="../about.ui" line="174"/>
         <source>QSS Editor is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</source>
         <extracomment>See https://www.gnu.org/licenses/gpl-2.0.txt . &quot;THT&quot; is the name of the application</extracomment>
         <translation>QSS Editor wird verbreitet in der Hoffnung nützlich zu sein, OHNE DIESE ZU GARANTIEREN; zudem werden alle weiteren Gewährleistungen, wie die implizite Gewährleistung der MARKTFÄHIGKEIT und der EIGNUNG FÜR EINEN BESTIMMTEN ZWECK explizit ausgeschlossen.</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="122"/>
+        <location filename="../about.ui" line="161"/>
         <source>QSS Editor is a tool to edit and preview Qt style sheets</source>
         <extracomment>&quot;THT&quot; is the name of the application. The URL to visit will be added in runtime. Ticker is a short company name, see http://www.investopedia.com/terms/t/tickersymbol.asp . The common practice is to borrow &quot;ticker&quot; from English and incorporate into your language (see http://en.wikipedia.org/wiki/Loanword)</extracomment>
         <translation>QSS Editor ist ein tool zum bearbeiten und Anzeigen von Qt style sheets</translation>
@@ -24,6 +24,11 @@
         <location filename="../about.cpp" line="37"/>
         <source>Dmitry Baryshev</source>
         <translation>Dmitry Baryshev</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="40"/>
+        <source>Ilya Tsybulsky</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

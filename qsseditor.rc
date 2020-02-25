@@ -29,7 +29,7 @@ BEGIN
           VALUE "FileDescription",    "QSS Editor"
           VALUE "FileVersion",        quote(NVER)
           VALUE "InternalName",       quote(TARGET)
-          VALUE "LegalCopyright",     "(C) 2014 Dmitry Baryshev"
+          VALUE "LegalCopyright",     "(C) 2014 Dmitry Baryshev; 2020 Ilya Tsybulsky"
           VALUE "ProductName",        "QSS Editor"
           VALUE "ProductVersion",     quote(NVER)
           VALUE "Builder",            "Dmitry Baryshev"
