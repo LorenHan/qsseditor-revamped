@@ -30,6 +30,7 @@
 #include <QMenu>
 #include <QDir>
 #include <QToolTip>
+#include <QResource>
 
 #include "searchandreplace.h"
 #include "qscilexerqss.h"
@@ -152,6 +153,8 @@ QssEditor::QssEditor(QWidget *parent) :
 
     // QSS lexer
     QsciLexerQSS *lexQss = new QsciLexerQSS(this);
+	const QFont def_font("Courier New", 14, QFont::Normal);
+	lexQss->setDefaultFont(def_font);
     ui->text->setLexer(lexQss);
 
     ui->text->setFocus();
@@ -354,7 +357,7 @@ void QssEditor::appendCurrentProjectToHistory()
         ui->toolOpen->setMenu(new QMenu(ui->toolOpen));
 
     QList<QAction *> actions = ui->toolOpen->menu()->actions();
-    QAction *movedAction = 0;
+	QAction *movedAction = nullptr;
 
     // already first element
     if(!actions.isEmpty() && actions.first()->text() == m_lastFileName)
@@ -370,7 +373,7 @@ void QssEditor::appendCurrentProjectToHistory()
         }
     }
 
-    ui->toolOpen->menu()->insertAction(!actions.isEmpty() ? actions.first() : 0,
+	ui->toolOpen->menu()->insertAction(!actions.isEmpty() ? actions.first() : nullptr,
                                        movedAction ? movedAction : new QAction(m_lastFileName, ui->toolOpen->menu()));
 }
 
@@ -399,8 +402,9 @@ void QssEditor::slotCssChanged()
 
 void QssEditor::slotApplyCss()
 {
-    ui->widgetAllWidgets->setStyleSheet(ui->text->text());
-    ui->toolButton->menu()->setStyleSheet(ui->widgetAllWidgets->styleSheet());
+	const QString sStylesheet = ui->text->text();
+	ui->widgetAllWidgets->setStyleSheet(sStylesheet);
+	ui->toolButton->menu()->setStyleSheet(sStylesheet);
 }
 
 void QssEditor::slotOpen()
@@ -408,12 +412,29 @@ void QssEditor::slotOpen()
     if(!continueWhenUnsaved())
         return;
 
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open style"), QString(), tr("Qt Style Sheets (*.qss)"));
+	QString sQssFileName = QFileDialog::getOpenFileName(this, tr("Open style"), QString(), tr("Qt Style Sheets (*.qss)"));
+	if(sQssFileName.isEmpty())
+		return;
 
-    if(fileName.isEmpty())
-        return;
+	QString sQrcFileName;
+	if (!ResourceCompiler::CheckIfQrcFileExists(sQssFileName, sQrcFileName))
+	{
+		const auto nAns = QMessageBox::question(this, "", tr("No corresponding .qrc file found. Would you like to specify one?"));
+		if (nAns == QMessageBox::Yes)
+			sQrcFileName = QFileDialog::getOpenFileName(this, tr("Open resource"), QFileInfo(sQssFileName).absolutePath(),
+				tr("Qt Resources (*.qrc)"));
+		else
+			sQrcFileName = "";
+	}
+	m_ResComp.UnregisterBinary();
+	if (!sQrcFileName.isEmpty())
+	{
+		qDebug() << "Using qrc file " << sQrcFileName;
+		if (!m_ResComp.CompileAndRegister(sQrcFileName))
+			QMessageBox::information(this, "", tr("Resource compilation failed!\n%1").arg(m_ResComp.GetErrorText()));
+	}
 
-    open(fileName);
+	open(sQssFileName);
 }
 
 void QssEditor::slotSave()

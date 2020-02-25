@@ -21,6 +21,7 @@
 #include <QWidget>
 
 #include "project.h"
+#include "ResourceCompiler.h"
 
 class QTimer;
 
@@ -80,6 +81,7 @@ private:
     bool m_changed;
     QString m_lastFileName;
     Project m_project;
+	ResourceCompiler m_ResComp;
 };
 
 #endif // QSSEDITOR_H

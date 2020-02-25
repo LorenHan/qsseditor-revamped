@@ -9,6 +9,7 @@ Patches for Mac: Israel Lins Albuquerque <i.lins85@icloud.com>
 License:  
  * GNU GPLv3+ (see LICENSE.txt),  
  * QScintilla parts are under GNU GPL v3,  
+ * RCCResourceLibrary class (rcc.cpp/.h) borrowed from [qtbase/src/tools/rcc](https://github.com/qt/qtbase/tree/dev/src/tools/rcc) and is subject to the GPL v3,  
  * all UI files are licensed in the same manner as the main project
 
 # Other

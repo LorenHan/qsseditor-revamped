@@ -23,7 +23,7 @@
 class QsciLexerQSS : public QsciLexerCSS
 {
 public:
-    QsciLexerQSS(QObject *parent = 0);
+	QsciLexerQSS(QObject *parent = nullptr);
 
     virtual const char *keywords(int set) const;
     virtual QFont defaultFont(int style) const;

@@ -7,7 +7,7 @@ mac: greaterThan(QT_MAJOR_VERSION, 4): QT *= macextras
 
 NVER1=0
 NVER2=6
-NVER3=1
+NVER3=2
 
 include($$_PRO_FILE_PWD_/QssEditor-common.pri)
 
@@ -18,7 +18,9 @@ SOURCES += main.cpp \
     settings.cpp \
     searchandreplace.cpp \
     options.cpp \
-    about.cpp
+    about.cpp \
+    rcc/rcc.cpp \
+    ResourceCompiler.cpp
 
 HEADERS += qsseditor.h \
     qscilexerqss.h \
@@ -27,7 +29,9 @@ HEADERS += qsseditor.h \
     searchandreplace.h \
     options.h \
     about.h \
-    tools.h
+    tools.h \
+    rcc/rcc.h \
+    ResourceCompiler.h
 
 FORMS += qsseditor.ui \
     searchandreplace.ui \
@@ -41,6 +45,12 @@ RC_FILE = qsseditor.rc
 unix:!mac {
     CONFIG += qscintilla2
 }
+
+# turn off compression in RCC:
+DEFINES += QT_FEATURE_zstd=-1
+
+INCLUDEPATH += $$_PRO_FILE_PWD_/rcc
+DEPENDPATH += $$_PRO_FILE_PWD_/rcc
 
 QSCINTILLA_INTERNAL=$$(QSCINTILLA_INTERNAL)
 equals(QSCINTILLA_INTERNAL, 1)|win32|mac {
