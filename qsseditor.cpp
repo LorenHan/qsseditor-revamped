@@ -29,6 +29,7 @@
 #include <QTimer>
 #include <QMenu>
 #include <QDir>
+#include <QToolTip>
 
 #include "searchandreplace.h"
 #include "qscilexerqss.h"
@@ -537,4 +538,10 @@ void QssEditor::slotAbout()
 void QssEditor::slotAboutQt()
 {
     QMessageBox::aboutQt(this);
+}
+
+void QssEditor::on_btnDisplayTooltip_clicked()
+{
+	const QPoint ptPos = ui->btnDisplayTooltip->mapToGlobal({ 0, 0 });
+	QToolTip::showText(ptPos, tr("This is a tooltip.\n\nCheck if it's visible and has the desired look."));
 }

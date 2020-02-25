@@ -101,7 +101,7 @@
     <name>QssEditor</name>
     <message>
         <location filename="../qsseditor.ui" line="29"/>
-        <location filename="../qsseditor.cpp" line="410"/>
+        <location filename="../qsseditor.cpp" line="411"/>
         <source>Open style</source>
         <translation>Öffne Stil</translation>
     </message>
@@ -112,7 +112,7 @@
     </message>
     <message>
         <location filename="../qsseditor.ui" line="46"/>
-        <location filename="../qsseditor.cpp" line="432"/>
+        <location filename="../qsseditor.cpp" line="433"/>
         <source>Save style as</source>
         <translation>Speichere Stil als</translation>
     </message>
@@ -142,70 +142,103 @@
         <translation>Vorschau Stil</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="205"/>
+        <location filename="../qsseditor.ui" line="428"/>
+        <source>Checkable GroupBox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsseditor.ui" line="510"/>
+        <source>Press to show a tooltip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsseditor.ui" line="513"/>
+        <source>Display a tooltip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsseditor.ui" line="838"/>
+        <source>Text edit (QTextEdit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsseditor.ui" line="408"/>
+        <location filename="../qsseditor.ui" line="411"/>
+        <source>Plain text edit (QPlainTextEdit)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qsseditor.cpp" line="206"/>
         <source>Cannot open style:</source>
         <translation>Kann Stil nicht öffnen:</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="233"/>
+        <location filename="../qsseditor.cpp" line="234"/>
         <source>Cannot save style:</source>
         <translation>Kann Stil nicht speichern:</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="252"/>
+        <location filename="../qsseditor.cpp" line="253"/>
         <source>No error</source>
         <translation>Kein Fehler</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="255"/>
+        <location filename="../qsseditor.cpp" line="256"/>
         <source>File access error</source>
         <translation>Datei-Zugriffsfehler</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="258"/>
+        <location filename="../qsseditor.cpp" line="259"/>
         <source>Malformed file</source>
         <translation>Fehlerhafte Datei</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="261"/>
+        <location filename="../qsseditor.cpp" line="262"/>
         <source>Unknown error</source>
         <translation>Unbekannter Fehler</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="268"/>
+        <location filename="../qsseditor.cpp" line="269"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="269"/>
+        <location filename="../qsseditor.cpp" line="270"/>
         <source>This will discard all the unsaved changes</source>
         <translation>Dadurch werden alle gespeicherten Änderungen verworfen</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="282"/>
+        <location filename="../qsseditor.cpp" line="283"/>
         <source>Cannot open style. The file doesn&apos;t exist or not readable</source>
         <translation>Kann Stil nicht öffnen. Datei existiert nicht oder kann nicht gelesen werden</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="288"/>
+        <location filename="../qsseditor.cpp" line="289"/>
         <source>Cannot change directory</source>
         <translation>Verzeichnis kann nicht geändert werden</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="302"/>
+        <location filename="../qsseditor.cpp" line="303"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="378"/>
+        <location filename="../qsseditor.cpp" line="379"/>
         <source>QSS Editor</source>
         <translation>QSS Editor</translation>
     </message>
     <message>
-        <location filename="../qsseditor.cpp" line="410"/>
-        <location filename="../qsseditor.cpp" line="432"/>
+        <location filename="../qsseditor.cpp" line="411"/>
+        <location filename="../qsseditor.cpp" line="433"/>
         <source>Qt Style Sheets (*.qss)</source>
         <translation>Qt Style Sheets (*.qss)</translation>
+    </message>
+    <message>
+        <location filename="../qsseditor.cpp" line="546"/>
+        <source>This is a tooltip.
+
+Check if it&apos;s visible and has the desired look.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

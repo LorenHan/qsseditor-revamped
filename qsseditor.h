@@ -72,6 +72,8 @@ private slots:
     void slotAbout();
     void slotAboutQt();
 
+	void on_btnDisplayTooltip_clicked();
+
 private:
     Ui::QssEditor *ui;
     QTimer *m_timerDelayedApply;
